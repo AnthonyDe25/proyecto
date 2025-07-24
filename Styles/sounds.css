@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; 
+    color: #fff; 
+}
+
+/* Sound Section */
+.sounds {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the sound section */
+    text-align: left;
+}
+
+.sounds-container {
+    margin-top: 60px;
+    display: flexible;
+    margin-left: -10px;
+    gap: 20px;
+    width: 150%; /* Adjust width to fit the resolution */
+    max-width: 450px;
+}
+
+.audio-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #1e1e1e; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+.audio-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px; 
+}
+
+.audio-info {
+    flex: 1;
+}
+
+.audio-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #fff; /* Texto blanco */
+}
+
+.audio-info p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #b3b3b3; /* Texto gris */
+}
+
+audio {
+    outline: none;
+}
+
+audio::-webkit-media-controls {
+    filter: invert(1); /* Cambia el control a blanco */
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.audio-controls button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #1db954; /* Verde estilo Spotify */
+    color: white;
+    font-size: 14px;
+}
+
+.audio-controls button:hover {
+    background-color: #1aaf4a; /* Verde más oscuro al pasar el cursor */
+}
+
+.placeholder-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #2b2b2b; /* Fondo más oscuro para "Próximamente" */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.placeholder-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #757575; /* Texto gris para "Próximamente" */
+}
+
+/* Carousel Section */
+.carousel-container {
+    display: flex;
+    margin: 2rem auto; /* Center the carousel */
+    width: 1000px; /* Adjust width to fit the resolution */
+    justify-content: center;
+    align-items: center; /* Center align items */
+    min-height: 60vh; /* Adjust height for better fit */
+}
+
+.carousel {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column size */
+    gap: 20px;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .card-content {
+    opacity: 0.5; /* Reduce opacity when the card is hovered */
+    transform: scale(0.90); /* Slightly shrink the content */
+    filter: none; /* Ensure no additional filters are applied */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px;
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 15px;
+}
+
+.carousel:hover .card {
+    opacity: 0.5; /* Make all cards slightly opaque when hovering over the carousel */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.carousel .card:hover {
+    opacity: 1; /* Restore full opacity for the hovered card */
+    transform: scale(1.05); /* Slightly enlarge the hovered card */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Enhance shadow for the hovered card */
+}
